@@ -12,12 +12,12 @@ namespace Gotchi.Objects
     private static List<Tamagotchi> _instances = new List<Tamagotchi>{};
 
 
-    public Tamagotchi (string name, int food = 5, int attention = 10, int rest = 7)
+    public Tamagotchi (string name)
     {
       _name = name;
-      _food = food;
-      _attention = attention;
-      _rest = rest;
+      _food = 5;
+      _attention = 10;
+      _rest = 7;
       _instances.Add(this);
       _id = _instances.Count;
     }
@@ -77,6 +77,11 @@ namespace Gotchi.Objects
     public static Tamagotchi Find(int searchId)
     {
       return _instances[searchId - 1];
+    }
+
+    public void AddRest()
+    {
+      this._rest += 1;
     }
   }
 }

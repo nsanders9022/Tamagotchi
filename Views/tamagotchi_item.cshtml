@@ -2,6 +2,9 @@
 <h2>Food: @Model.GetFood()</h2>
 <h2>Attention: @Model.GetAttention()</h2>
 <h2>Rest: @Model.GetRest()</h2>
+<form action='/tamagotchi_item/rest/@Model.GetId()' method="post">
+  <button type="submit" id="rest-button">Rest</button>
+</form>
 
 
 <a href='/tamagotchi_list/new'>Add another Tamagotchi</a>

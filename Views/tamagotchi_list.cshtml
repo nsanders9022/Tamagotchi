@@ -3,6 +3,14 @@
     @foreach (var tamagotchis in Model)
     {
       <li><a href= '/tamagotchi_list/@tamagotchis.GetId()'>@tamagotchis.GetName()</a></li>
+      <ul>
+        <li>Food: @tamagotchis.GetFood()</a></li>
+        <li>Attention: @tamagotchis.GetAttention()</a></li>
+        <li>Rest: @tamagotchis.GetRest()</a></li>
+      </ul>
     }
   </ul>
+
+  
+
   <a href = '/tamagotchi_list/new'> Add a new Tamagotchi Pet</a>

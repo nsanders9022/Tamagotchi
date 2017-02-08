@@ -12,7 +12,7 @@ namespace Gotchi.Objects
     private static List<Tamagotchi> _instances = new List<Tamagotchi>{};
 
 
-    public Place (string name, int food, int attention, int rest)
+    public Tamagotchi (string name, int food = 5, int attention = 10, int rest = 7)
     {
       _name = name;
       _food = food;

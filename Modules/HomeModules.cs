@@ -15,18 +15,18 @@ namespace TamagotchiGame
     Get["/tamagotchi_list"] = _ =>
     {
       List<Tamagotchi> allTamagotchis = Tamagotchi.GetAll();
-      return View["tamagotchislist.cshtml", allTamagotchis];
+      return View["tamagotchi_list.cshtml", allTamagotchis];
     };
 
     Get["/tamagotchi_list/new"] = _ => {
-        return View["Tamagotchi_form.cshtml"];
+        return View["tamagotchi_form.cshtml"];
       };
       Get["/tamagotchi_list/{id}"] = parameters => {
         Tamagotchi tamagotchi = Tamagotchi.Find(parameters.id);
         return View["tamagotchi_item.cshtml", tamagotchi];
       };
       Post["/tamagotchi_list"] = _ => {
-        Tamagotchi newTamagotchi = new Tamagotchi(Request.Form["new-name"], Request.Form["new-food"], Request.Form["new-attention"], Request.Form["new-rest"]);
+        Tamagotchi newTamagotchi = new Tamagotchi(Request.Form["new-name"]);
         List<Tamagotchi> allTamagotchis = Tamagotchi.GetAll();
         return View["tamagotchi_list.cshtml", allTamagotchis];
       };

@@ -79,6 +79,17 @@ namespace Gotchi.Objects
       return _instances[searchId - 1];
     }
 
+    public static void AddTime()
+    {
+      foreach (Tamagotchi pet in _instances)
+      {
+        pet._food -= 1;
+        pet._attention -= 1;
+        pet._rest -= 1;
+      }
+
+    }
+
     public void AddRest()
     {
       this._rest += 1;

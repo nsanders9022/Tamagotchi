@@ -45,6 +45,11 @@ namespace TamagotchiGame
         tamagotchi.AddAttention();
         return View["tamagotchi_item.cshtml", tamagotchi];
       };
+      Post["/tamagotchi_list/time"] = _ => {
+        Tamagotchi.AddTime();
+        // List<Tamagotchi> allTamagotchis = Tamagotchi.GetAll();
+        return View["tamagotchi_list.cshtml", Tamagotchi.GetAll()];
+      };
     }
   }
 }

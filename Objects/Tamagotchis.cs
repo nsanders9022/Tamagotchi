@@ -83,5 +83,15 @@ namespace Gotchi.Objects
     {
       this._rest += 1;
     }
+
+    public void AddFood()
+    {
+      this._food += 1;
+    }
+
+    public void AddAttention()
+    {
+      this._attention += 1;
+    }
   }
 }

@@ -35,6 +35,16 @@ namespace TamagotchiGame
         tamagotchi.AddRest();
         return View["tamagotchi_item.cshtml", tamagotchi];
       };
+      Post["/tamagotchi_item/food/{id}"] = parameters => {
+        Tamagotchi tamagotchi = Tamagotchi.Find(parameters.id);
+        tamagotchi.AddFood();
+        return View["tamagotchi_item.cshtml", tamagotchi];
+      };
+      Post["/tamagotchi_item/attention/{id}"] = parameters => {
+        Tamagotchi tamagotchi = Tamagotchi.Find(parameters.id);
+        tamagotchi.AddAttention();
+        return View["tamagotchi_item.cshtml", tamagotchi];
+      };
     }
   }
 }

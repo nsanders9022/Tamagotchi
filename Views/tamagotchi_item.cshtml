@@ -1,6 +1,12 @@
 <h1>@Model.GetName()</h1>
 <h2>Food: @Model.GetFood()</h2>
+<form action='/tamagotchi_item/food/@Model.GetId()' method="post">
+  <button type="submit" id="food-button">Food</button>
+</form>
 <h2>Attention: @Model.GetAttention()</h2>
+<form action='/tamagotchi_item/attention/@Model.GetId()' method="post">
+  <button type="submit" id="attention-button">Attention</button>
+</form>
 <h2>Rest: @Model.GetRest()</h2>
 <form action='/tamagotchi_item/rest/@Model.GetId()' method="post">
   <button type="submit" id="rest-button">Rest</button>
